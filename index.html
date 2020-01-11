@@ -8,8 +8,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <!-- Local Style Sheet -->
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    
 
     <title>Daily Planner</title>
   </head>
@@ -21,26 +22,132 @@
             <div>
                 <h1>Daily Planner</h1>
                 <p>An app to help plan your day</p>
-                <span>Date & Time goes here</span>
+                <p id="currentDate" style="font-weight: bold; font-size: 20px;">
+                </p>
             </div>
         </div>
-        <br>
+        <hr>
 
-        <div class="row">
-            <div class="col-8">
-                <h3>Where the times 9 to 5 go</h3>
-                <div id="time">
-                  <div>9am</div>
-                  <div>10am</div>
-                  <div>11am</div>
-                  <div>12pm</div>
-                  <div>1pm</div>
-                  <div>2pm</div>
-                  <div>3pm</div>
-                  <div>4pm</div>
-                  <div>5pm</div>
-                </div>
+        <!-- Hourly Planner -->
+        <div id="times-container" class="container">
+          <!-- Hour Block -->
+            <div class="row">
+              <div id="time-of-day" class="col-1">
+                9 AM
+              </div>
+              <input type= "text" class="col-9" id="9am" style="border: 1px solid white"; onchange="bgColorInput">
+              </input>
+              <div id="button" class="col-1">
+                <button id="saveBtn" value="#9am" class="btn btn-info btn-lg btn-block">
+                <span class="fa fa-floppy-o"></span>
+                </button>
+              </div>
             </div>
+
+            <div class="row">
+              <div id="time-of-day" class="col-1">
+                10 AM
+              </div>
+              <input type= "text" class="col-9" id="10am" style="border: 1px solid white"; onchange="bgColorInput">
+              </input>
+              <div id="button" class="col-1">
+                <button id="saveBtn" value="#10am" class="btn btn-info btn-lg btn-block">
+                <span class="fa fa-floppy-o"></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="row">
+              <div id="time-of-day" class="col-1">
+                11 AM
+              </div>
+              <input type= "text" class="col-9" id="11am" style="border: 1px solid white"; onchange="bgColorInput">
+              </input>
+              <div id="button" class="col-1">
+                <button id="saveBtn" value="#11am" class="btn btn-info btn-lg btn-block">
+                <span class="fa fa-floppy-o"></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="row">
+              <div id="time-of-day" class="col-1">
+                12 PM
+              </div>
+              <input type= "text" class="col-9" id="12pm" style="border: 1px solid white"; onchange="bgColorInput">
+              </input>
+              <div id="button" class="col-1">
+                <button id="saveBtn" value="#12pm" class="btn btn-info btn-lg btn-block">
+                <span class="fa fa-floppy-o"></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="row">
+              <div id="time-of-day" class="col-1">
+                1 PM
+              </div>
+              <input type= "text" class="col-9" id="1pm" style="border: 1px solid white"; onchange="bgColorInput">
+              </input>
+              <div id="button" class="col-1">
+                <button id="saveBtn" value="#12pm" class="btn btn-info btn-lg btn-block">
+                <span class="fa fa-floppy-o"></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="row">
+              <div id="time-of-day" class="col-1">
+                2 PM
+              </div>
+              <input type= "text" class="col-9" id="2pm" style="border: 1px solid white"; onchange="bgColorInput">
+              </input>
+              <div id="button" class="col-1">
+                <button id="saveBtn" value="#2pm" class="btn btn-info btn-lg btn-block">
+                <span class="fa fa-floppy-o"></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="row">
+              <div id="time-of-day" class="col-1">
+                3 PM
+              </div>
+              <input type= "text" class="col-9" id="3pm" style="border: 1px solid white"; onchange="bgColorInput">
+              </input>
+              <div id="button" class="col-1">
+                <button id="saveBtn" value="#9am" class="btn btn-info btn-lg btn-block">
+                <span class="fa fa-floppy-o"></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="row">
+              <div id="time-of-day" class="col-1">
+                4 PM
+              </div>
+              <input type= "text" class="col-9" id="4pm" style="border: 1px solid white"; onchange="bgColorInput">
+              </input>
+              <div id="button" class="col-1">
+                <button id="saveBtn" value="#4pm" class="btn btn-info btn-lg btn-block">
+                <span class="fa fa-floppy-o"></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="row">
+              <div id="time-of-day" class="col-1">
+                5 PM
+              </div>
+              <input type= "text" class="col-9" id="5pm" style="border: 1px solid white"; onchange="bgColorInput">
+              </input>
+              <div id="button" class="col-1">
+                <button id="saveBtn" value="#5pm" class="btn btn-info btn-lg btn-block">
+                <span class="fa fa-floppy-o"></span>
+                </button>
+              </div>
+            </div>
+
         </div>
     </div>
     
@@ -48,10 +155,20 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- FontAwesome Script for Save Buttons-->
+    <script src="https://use.fontawesome.com/6884da1700.js"></script>
+
+    <!-- Optional Script for moment.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script> 
+
+    <!-- main.js link -->
+    <script src="script.js"></script>
+
   </body>
 </html>
